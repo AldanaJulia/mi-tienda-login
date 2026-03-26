@@ -75,10 +75,6 @@ button:hover {
     text-decoration: none;
 }
 
-.recuperar a:hover {
-    text-decoration: underline;
-}
-
 .footer {
     text-align: center;
     font-size: 12px;
@@ -100,7 +96,8 @@ button:hover {
     <label>Contraseña</label>
     <input type="password" id="clave" placeholder="Ingrese su contraseña">
 
-    <button onclick="login()">Ingresar</button>
+    <!-- IMPORTANTE: type="button" -->
+    <button type="button" onclick="login()">Ingresar</button>
 
     <div class="mensaje" id="mensaje"></div>
 
