@@ -96,7 +96,6 @@ button:hover {
     <label>Contraseña</label>
     <input type="password" id="clave" placeholder="Ingrese su contraseña">
 
-    <!-- IMPORTANTE: type="button" -->
     <button type="button" onclick="login()">Ingresar</button>
 
     <div class="mensaje" id="mensaje"></div>
@@ -120,7 +119,12 @@ function login() {
 
     if (user === "admin" && pass === "1234") {
         mensaje.style.color = "green";
-        mensaje.innerHTML = "✔ Bienvenido a Mi Tienda";
+        mensaje.innerHTML = "✔ Bienvenido... ingresando";
+
+        setTimeout(() => {
+            alert("Entraste al sistema 😎");
+        }, 1000);
+
     } else {
         mensaje.style.color = "red";
         mensaje.innerHTML = "❌ Usuario o contraseña incorrectos";
